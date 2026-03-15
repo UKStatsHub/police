@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-03-15T14:05:19.697Z",
+  "timestamp": "2026-03-15T17:26:16.887Z",
   "population": {
     "englandWales": 59650000,
     "england": 56290000,
@@ -274,15 +274,15 @@
       "2025-02"
     ],
     "forceCount": 44,
-    "lastUpdated": "2026-03-15T14:05:12.653Z",
+    "lastUpdated": "2026-03-15T17:26:13.499Z",
     "source": "https://data.police.uk/api/"
   },
   "crime": {
     "totalCSEWIncidents": 9300000,
     "totalRecordedCrimes": 6700000,
-    "fraudIncidents": 9300000,
+    "fraudIncidents": 0,
     "annualChange": 0,
-    "lastUpdated": "2026-03-15T14:05:13.755Z",
+    "lastUpdated": "2026-03-15T17:26:13.601Z",
     "source": "https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwales/latest"
   },
   "scottish": {
@@ -295,7 +295,7 @@
     "clearUpRate": 56,
     "cyberCrimes": 14120,
     "year": "2024-25",
-    "lastUpdated": "2026-03-15T14:05:14.600Z",
+    "lastUpdated": "2026-03-15T17:26:14.278Z",
     "source": "https://www.gov.scot/publications/recorded-crime-scotland-2024-25/"
   },
   "stopAndSearch": {
@@ -303,12 +303,12 @@
     "arrestRate": 14.9,
     "arrests": 78759,
     "byEthnicity": {
-      "white": 76644,
-      "black": 88273,
-      "asian": 71887
+      "white": 0,
+      "black": 0,
+      "asian": 0
     },
     "year": "2024-25",
-    "lastUpdated": "2026-03-15T14:05:16.400Z",
+    "lastUpdated": "2026-03-15T17:26:14.323Z",
     "source": "https://www.gov.uk/government/statistics/stop-and-search-arrests-and-mental-health-detentions-march-2025"
   },
   "iopc": {
@@ -317,7 +317,7 @@
     "investigations": 0,
     "appeals": 0,
     "year": "2024-25",
-    "lastUpdated": "2026-03-15T14:05:17.670Z",
+    "lastUpdated": "2026-03-15T17:26:15.365Z",
     "source": "https://www.policeconduct.gov.uk/our-work/research-and-statistics"
   },
   "psni": {
@@ -326,16 +326,16 @@
     "budget": 0,
     "useOfForce": 0,
     "year": "2024-25",
-    "lastUpdated": "2026-03-15T14:05:18.823Z",
+    "lastUpdated": "2026-03-15T17:26:16.880Z",
     "source": "https://www.psni.police.uk/official-statistics-and-police-service-northern-ireland"
   },
   "workforce": {
-    "totalOfficers": 145550,
+    "totalOfficers": 0,
     "policeStaff": 0,
     "pcsos": 0,
-    "totalWorkforce": 145550,
+    "totalWorkforce": 0,
     "year": "2024-25",
-    "lastUpdated": "2026-03-15T14:05:19.697Z",
+    "lastUpdated": "2026-03-15T17:26:16.887Z",
     "source": "https://www.gov.uk/government/collections/police-workforce-england-and-wales"
   },
   "summary": {
