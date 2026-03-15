@@ -1,0 +1,381 @@
+{
+  "timestamp": "2026-03-15T14:05:19.697Z",
+  "population": {
+    "englandWales": 59650000,
+    "england": 56290000,
+    "wales": 3360000,
+    "scotland": 5479000,
+    "northernIreland": 1906000,
+    "uk": 67330000
+  },
+  "prison": {
+    "total": 85613,
+    "male": 81332,
+    "female": 4281,
+    "remand": 16628,
+    "sentenced": 68985,
+    "capacity": 89573,
+    "lastUpdated": "31 Dec 2025",
+    "source": "https://data.justice.gov.uk/prisons/offender-management/population"
+  },
+  "policeUk": {
+    "forces": [
+      {
+        "id": "avon-and-somerset",
+        "name": "Avon and Somerset Constabulary"
+      },
+      {
+        "id": "bedfordshire",
+        "name": "Bedfordshire Police"
+      },
+      {
+        "id": "cambridgeshire",
+        "name": "Cambridgeshire Constabulary"
+      },
+      {
+        "id": "cheshire",
+        "name": "Cheshire Constabulary"
+      },
+      {
+        "id": "city-of-london",
+        "name": "City of London Police"
+      },
+      {
+        "id": "cleveland",
+        "name": "Cleveland Police"
+      },
+      {
+        "id": "cumbria",
+        "name": "Cumbria Constabulary"
+      },
+      {
+        "id": "derbyshire",
+        "name": "Derbyshire Constabulary"
+      },
+      {
+        "id": "devon-and-cornwall",
+        "name": "Devon & Cornwall Police"
+      },
+      {
+        "id": "dorset",
+        "name": "Dorset Police"
+      },
+      {
+        "id": "durham",
+        "name": "Durham Constabulary"
+      },
+      {
+        "id": "essex",
+        "name": "Essex Police"
+      },
+      {
+        "id": "gloucestershire",
+        "name": "Gloucestershire Constabulary"
+      },
+      {
+        "id": "greater-manchester",
+        "name": "Greater Manchester Police"
+      },
+      {
+        "id": "gwent",
+        "name": "Gwent Police"
+      },
+      {
+        "id": "hampshire",
+        "name": "Hampshire Constabulary"
+      },
+      {
+        "id": "dyfed-powys",
+        "name": "Dyfed-Powys Police"
+      },
+      {
+        "id": "hertfordshire",
+        "name": "Hertfordshire Constabulary"
+      },
+      {
+        "id": "humberside",
+        "name": "Humberside Police"
+      },
+      {
+        "id": "kent",
+        "name": "Kent Police"
+      },
+      {
+        "id": "lancashire",
+        "name": "Lancashire Constabulary"
+      },
+      {
+        "id": "leicestershire",
+        "name": "Leicestershire Police"
+      },
+      {
+        "id": "lincolnshire",
+        "name": "Lincolnshire Police"
+      },
+      {
+        "id": "merseyside",
+        "name": "Merseyside Police"
+      },
+      {
+        "id": "metropolitan",
+        "name": "Metropolitan Police Service"
+      },
+      {
+        "id": "norfolk",
+        "name": "Norfolk Constabulary"
+      },
+      {
+        "id": "north-wales",
+        "name": "North Wales Police"
+      },
+      {
+        "id": "north-yorkshire",
+        "name": "North Yorkshire Police"
+      },
+      {
+        "id": "northamptonshire",
+        "name": "Northamptonshire Police"
+      },
+      {
+        "id": "northumbria",
+        "name": "Northumbria Police"
+      },
+      {
+        "id": "nottinghamshire",
+        "name": "Nottinghamshire Police"
+      },
+      {
+        "id": "northern-ireland",
+        "name": "Police Service of Northern Ireland"
+      },
+      {
+        "id": "south-wales",
+        "name": "South Wales Police"
+      },
+      {
+        "id": "south-yorkshire",
+        "name": "South Yorkshire Police"
+      },
+      {
+        "id": "staffordshire",
+        "name": "Staffordshire Police"
+      },
+      {
+        "id": "suffolk",
+        "name": "Suffolk Constabulary"
+      },
+      {
+        "id": "surrey",
+        "name": "Surrey Police"
+      },
+      {
+        "id": "sussex",
+        "name": "Sussex Police"
+      },
+      {
+        "id": "thames-valley",
+        "name": "Thames Valley Police"
+      },
+      {
+        "id": "warwickshire",
+        "name": "Warwickshire Police"
+      },
+      {
+        "id": "west-mercia",
+        "name": "West Mercia Police"
+      },
+      {
+        "id": "west-midlands",
+        "name": "West Midlands Police"
+      },
+      {
+        "id": "west-yorkshire",
+        "name": "West Yorkshire Police"
+      },
+      {
+        "id": "wiltshire",
+        "name": "Wiltshire Police"
+      }
+    ],
+    "categories": [
+      {
+        "url": "all-crime",
+        "name": "All crime"
+      },
+      {
+        "url": "anti-social-behaviour",
+        "name": "Anti-social behaviour"
+      },
+      {
+        "url": "bicycle-theft",
+        "name": "Bicycle theft"
+      },
+      {
+        "url": "burglary",
+        "name": "Burglary"
+      },
+      {
+        "url": "criminal-damage-arson",
+        "name": "Criminal damage and arson"
+      },
+      {
+        "url": "drugs",
+        "name": "Drugs"
+      },
+      {
+        "url": "other-theft",
+        "name": "Other theft"
+      },
+      {
+        "url": "possession-of-weapons",
+        "name": "Possession of weapons"
+      },
+      {
+        "url": "public-order",
+        "name": "Public order"
+      },
+      {
+        "url": "robbery",
+        "name": "Robbery"
+      },
+      {
+        "url": "shoplifting",
+        "name": "Shoplifting"
+      },
+      {
+        "url": "theft-from-the-person",
+        "name": "Theft from the person"
+      },
+      {
+        "url": "vehicle-crime",
+        "name": "Vehicle crime"
+      },
+      {
+        "url": "violent-crime",
+        "name": "Violence and sexual offences"
+      },
+      {
+        "url": "other-crime",
+        "name": "Other crime"
+      }
+    ],
+    "availableDates": [
+      "2026-01",
+      "2025-12",
+      "2025-11",
+      "2025-10",
+      "2025-09",
+      "2025-08",
+      "2025-07",
+      "2025-06",
+      "2025-05",
+      "2025-04",
+      "2025-03",
+      "2025-02"
+    ],
+    "forceCount": 44,
+    "lastUpdated": "2026-03-15T14:05:12.653Z",
+    "source": "https://data.police.uk/api/"
+  },
+  "crime": {
+    "totalCSEWIncidents": 9300000,
+    "totalRecordedCrimes": 6700000,
+    "fraudIncidents": 9300000,
+    "annualChange": 0,
+    "lastUpdated": "2026-03-15T14:05:13.755Z",
+    "source": "https://www.ons.gov.uk/peoplepopulationandcommunity/crimeandjustice/bulletins/crimeinenglandandwales/latest"
+  },
+  "scottish": {
+    "totalCrimes": 299111,
+    "nonSexualViolence": 0,
+    "sexualCrimes": 0,
+    "crimesOfDishonesty": 0,
+    "damageAndReckless": 0,
+    "crimesAgainstSociety": 0,
+    "clearUpRate": 56,
+    "cyberCrimes": 14120,
+    "year": "2024-25",
+    "lastUpdated": "2026-03-15T14:05:14.600Z",
+    "source": "https://www.gov.scot/publications/recorded-crime-scotland-2024-25/"
+  },
+  "stopAndSearch": {
+    "totalSearches": 528582,
+    "arrestRate": 14.9,
+    "arrests": 78759,
+    "byEthnicity": {
+      "white": 76644,
+      "black": 88273,
+      "asian": 71887
+    },
+    "year": "2024-25",
+    "lastUpdated": "2026-03-15T14:05:16.400Z",
+    "source": "https://www.gov.uk/government/statistics/stop-and-search-arrests-and-mental-health-detentions-march-2025"
+  },
+  "iopc": {
+    "totalComplaints": 94940,
+    "deathsDuringContact": 0,
+    "investigations": 0,
+    "appeals": 0,
+    "year": "2024-25",
+    "lastUpdated": "2026-03-15T14:05:17.670Z",
+    "source": "https://www.policeconduct.gov.uk/our-work/research-and-statistics"
+  },
+  "psni": {
+    "totalOfficers": 0,
+    "recordedCrimes": 0,
+    "budget": 0,
+    "useOfForce": 0,
+    "year": "2024-25",
+    "lastUpdated": "2026-03-15T14:05:18.823Z",
+    "source": "https://www.psni.police.uk/official-statistics-and-police-service-northern-ireland"
+  },
+  "workforce": {
+    "totalOfficers": 145550,
+    "policeStaff": 0,
+    "pcsos": 0,
+    "totalWorkforce": 145550,
+    "year": "2024-25",
+    "lastUpdated": "2026-03-15T14:05:19.697Z",
+    "source": "https://www.gov.uk/government/collections/police-workforce-england-and-wales"
+  },
+  "summary": {
+    "total": 8,
+    "successful": 8,
+    "failed": 0,
+    "success_rate": "100%"
+  },
+  "sources": [
+    {
+      "source": "MoJ Prison Population",
+      "success": true
+    },
+    {
+      "source": "Police UK API",
+      "success": true
+    },
+    {
+      "source": "ONS Crime Statistics",
+      "success": true
+    },
+    {
+      "source": "Scottish Crime Statistics",
+      "success": true
+    },
+    {
+      "source": "Stop and Search Statistics",
+      "success": true
+    },
+    {
+      "source": "IOPC Statistics",
+      "success": true
+    },
+    {
+      "source": "PSNI Statistics",
+      "success": true
+    },
+    {
+      "source": "Police Workforce Statistics",
+      "success": true
+    }
+  ]
+}
