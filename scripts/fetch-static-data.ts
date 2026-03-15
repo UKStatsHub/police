@@ -19,6 +19,8 @@ const PUBLIC_DIR = join(process.cwd(), 'public', 'data');
 
 const USER_AGENT = 'UK-Police-Crime-Data-Tracker/1.0 (Official Statistics Dashboard; +https://github.com)';
 const TIMEOUT = 30000;
+const FETCH_RETRIES = 3;
+const FETCH_RETRY_DELAY_MS = 1200;
 
 // UK Population data (ONS 2024 estimates)
 export const UK_POPULATION = {
@@ -30,32 +32,66 @@ export const UK_POPULATION = {
   uk: 67330000,
 };
 
-async function fetchURL(url: string, accept: string = 'application/json'): Promise<string> {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), TIMEOUT);
-  
-  try {
-    const response = await fetch(url, {
-      headers: { 
-        'User-Agent': USER_AGENT, 
-        'Accept': accept,
-        'Accept-Language': 'en-GB,en;q=0.9',
-      },
-      signal: controller.signal,
-    });
-    
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+interface FetchOptions {
+  retries?: number;
+  retryDelayMs?: number;
+  verbose?: boolean;
+}
+
+async function fetchURL(url: string, accept: string = 'application/json', options: FetchOptions = {}): Promise<string> {
+  const retries = options.retries ?? FETCH_RETRIES;
+  const retryDelayMs = options.retryDelayMs ?? FETCH_RETRY_DELAY_MS;
+  const verbose = options.verbose ?? false;
+
+  let attempt = 0;
+
+  while (true) {
+    attempt += 1;
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), TIMEOUT);
+
+    try {
+      if (verbose) {
+        console.log(`Fetching ${url} (attempt ${attempt}/${retries + 1})`);
+      }
+
+      const response = await fetch(url, {
+        headers: {
+          'User-Agent': USER_AGENT,
+          'Accept': accept,
+          'Accept-Language': 'en-GB,en;q=0.9',
+        },
+        signal: controller.signal,
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+
+      return response.text();
+    } catch (error: any) {
+      const msg = String(error);
+      const isAbort = msg.includes('The operation was aborted') || msg.includes('aborted');
+      const isSocket = msg.toLowerCase().includes('socket');
+
+      if (verbose) {
+        console.warn(`Fetch error (${attempt}/${retries + 1}): ${msg}`);
+      }
+
+      if (attempt > retries || (!isSocket && !isAbort)) {
+        throw error;
+      }
+
+      // Retry on transient socket/abort issues
+      await new Promise(resolve => setTimeout(resolve, retryDelayMs));
+    } finally {
+      clearTimeout(timeoutId);
     }
-    
-    return response.text();
-  } finally {
-    clearTimeout(timeoutId);
   }
 }
 
-async function fetchJSON<T>(url: string): Promise<T> {
-  const text = await fetchURL(url, 'application/json');
+async function fetchJSON<T>(url: string, options: FetchOptions = {}): Promise<T> {
+  const text = await fetchURL(url, 'application/json', options);
   return JSON.parse(text);
 }
 
@@ -77,10 +113,11 @@ function extractNumber(html: string, pattern: RegExp): number {
 async function fetchPrisonData() {
   console.log('Fetching MoJ Prison Population...');
   
+  const fetchOpts = { verbose: true, retries: 4, retryDelayMs: 2000 };
   const [popData, remandData, capData] = await Promise.all([
-    fetchJSON<any>('https://data.justice.gov.uk/api/prisons/offender-management/population'),
-    fetchJSON<any>('https://data.justice.gov.uk/api/prisons/offender-management/population-remand'),
-    fetchJSON<any>('https://data.justice.gov.uk/api/prisons/offender-management/prison-opcap'),
+    fetchJSON<any>('https://data.justice.gov.uk/api/prisons/offender-management/population', fetchOpts),
+    fetchJSON<any>('https://data.justice.gov.uk/api/prisons/offender-management/population-remand', fetchOpts),
+    fetchJSON<any>('https://data.justice.gov.uk/api/prisons/offender-management/prison-opcap', fetchOpts),
   ]);
   
   const latestPop = popData?.summaryData?.slice(-1)[0];
