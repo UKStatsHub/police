@@ -3,15 +3,12 @@
 
 import { Header } from '@/components/dashboard/Header';
 import { Footer } from '@/components/dashboard/Footer';
-import { CrimeSection } from '@/components/dashboard/CrimeSection';
+import { CrimeJusticeSection } from '@/components/dashboard/CrimeJusticeSection';
 import { WorkforceSection } from '@/components/dashboard/WorkforceSection';
-import { OffendersSection } from '@/components/dashboard/OffendersSection';
 import { EfficiencySection } from '@/components/dashboard/EfficiencySection';
 import { PolicySection } from '@/components/dashboard/PolicySection';
 import { DevolvedSection } from '@/components/dashboard/DevolvedSection';
 import { SourcesSection } from '@/components/dashboard/SourcesSection';
-import { MotivesSection } from '@/components/dashboard/MotivesSection';
-import { PoliceCrimeSection } from '@/components/dashboard/PoliceCrimeSection';
 import { DataFilterToggle } from '@/components/dashboard/DataFilterToggle';
 import { StatCard } from '@/components/dashboard/StatCard';
 import { crimeOverview, homicideStats } from '@/data/crimeData';
@@ -135,23 +132,14 @@ function DashboardContent() {
         <section className="mb-8 bg-white dark:bg-[#2B2B2B] border border-[#DEE0E2] dark:border-[#3A3A3A] p-4">
           <h2 className="text-sm font-semibold text-[#6B6B6B] dark:text-[#A0A0A0] mb-3">Quick Navigation</h2>
           <nav className="flex flex-wrap gap-2" aria-label="Section navigation">
-            <a href="#crime" className="px-3 py-1.5 bg-[#003087]/10 text-[#003087] dark:text-[#6B9BD1] text-sm hover:bg-[#003087]/20 transition-colors">
-              Crime Levels
-            </a>
-            <a href="#motives" className="px-3 py-1.5 bg-[#003087]/10 text-[#003087] dark:text-[#6B9BD1] text-sm hover:bg-[#003087]/20 transition-colors">
-              Motives
+            <a href="#crime-justice" className="px-3 py-1.5 bg-[#003087]/10 text-[#003087] dark:text-[#6B9BD1] text-sm hover:bg-[#003087]/20 transition-colors">
+              Crime & Justice
             </a>
             <a href="#workforce" className="px-3 py-1.5 bg-[#003087]/10 text-[#003087] dark:text-[#6B9BD1] text-sm hover:bg-[#003087]/20 transition-colors">
               Police Workforce
             </a>
-            <a href="#offenders" className="px-3 py-1.5 bg-[#003087]/10 text-[#003087] dark:text-[#6B9BD1] text-sm hover:bg-[#003087]/20 transition-colors">
-              Criminal Justice
-            </a>
             <a href="#efficiency" className="px-3 py-1.5 bg-[#003087]/10 text-[#003087] dark:text-[#6B9BD1] text-sm hover:bg-[#003087]/20 transition-colors">
               Efficiency & PEEL
-            </a>
-            <a href="#police-crime" className="px-3 py-1.5 bg-[#D4351C]/10 text-[#D4351C] dark:text-[#EF8B8B] text-sm hover:bg-[#D4351C]/20 transition-colors">
-              Police Misconduct
             </a>
             <a href="#devolved" className="px-3 py-1.5 bg-[#003087]/10 text-[#003087] dark:text-[#6B9BD1] text-sm hover:bg-[#003087]/20 transition-colors">
               Devolved Nations
@@ -180,19 +168,10 @@ function DashboardContent() {
         <Separator className="my-8 bg-[#DEE0E2] dark:bg-[#3A3A3A]" />
 
         {/* Main Content Sections */}
-        <CrimeSection />
-        <Separator className="my-8 bg-[#DEE0E2] dark:bg-[#3A3A3A]" />
-        
-        <PoliceCrimeSection />
-        <Separator className="my-8 bg-[#DEE0E2] dark:bg-[#3A3A3A]" />
-        
-        <MotivesSection />
+        <CrimeJusticeSection />
         <Separator className="my-8 bg-[#DEE0E2] dark:bg-[#3A3A3A]" />
         
         <WorkforceSection />
-        <Separator className="my-8 bg-[#DEE0E2] dark:bg-[#3A3A3A]" />
-        
-        <OffendersSection />
         <Separator className="my-8 bg-[#DEE0E2] dark:bg-[#3A3A3A]" />
         
         <EfficiencySection />
